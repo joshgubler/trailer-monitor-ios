@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		751748A52611421300B5F588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751748A42611421300B5F588 /* AppDelegate.swift */; };
 		751748A72611421300B5F588 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751748A62611421300B5F588 /* SceneDelegate.swift */; };
-		751748A92611421300B5F588 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751748A82611421300B5F588 /* ViewController.swift */; };
+		751748A92611421300B5F588 /* JGRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751748A82611421300B5F588 /* JGRootViewController.swift */; };
 		751748AC2611421300B5F588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751748AA2611421300B5F588 /* Main.storyboard */; };
 		751748AE2611421300B5F588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 751748AD2611421300B5F588 /* Assets.xcassets */; };
 		751748B12611421300B5F588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751748AF2611421300B5F588 /* LaunchScreen.storyboard */; };
+		751748BC2611858100B5F588 /* JGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751748B92611858100B5F588 /* JGLocation.swift */; };
+		751748BD2611858100B5F588 /* JGPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751748BA2611858100B5F588 /* JGPower.swift */; };
+		751748C2261188FE00B5F588 /* JGMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751748C0261188FE00B5F588 /* JGMessage.swift */; };
+		75929A1B26121A760055E8FA /* JGClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75929A1A26121A760055E8FA /* JGClient.swift */; };
+		75929A25261228380055E8FA /* JGPowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75929A24261228380055E8FA /* JGPowerViewController.swift */; };
+		75939215261269FD004B2765 /* JGMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75939214261269FD004B2765 /* JGMapViewController.swift */; };
+		7593922126127860004B2765 /* JGLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759392202612785F004B2765 /* JGLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		751748A12611421300B5F588 /* TrailerMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailerMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		751748A42611421300B5F588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		751748A62611421300B5F588 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		751748A82611421300B5F588 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		751748A82611421300B5F588 /* JGRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGRootViewController.swift; sourceTree = "<group>"; };
 		751748AB2611421300B5F588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		751748AD2611421300B5F588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		751748B02611421300B5F588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		751748B22611421300B5F588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		751748B92611858100B5F588 /* JGLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGLocation.swift; sourceTree = "<group>"; };
+		751748BA2611858100B5F588 /* JGPower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGPower.swift; sourceTree = "<group>"; };
+		751748C0261188FE00B5F588 /* JGMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGMessage.swift; sourceTree = "<group>"; };
+		75929A1A26121A760055E8FA /* JGClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGClient.swift; sourceTree = "<group>"; };
+		75929A24261228380055E8FA /* JGPowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGPowerViewController.swift; sourceTree = "<group>"; };
+		75939214261269FD004B2765 /* JGMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGMapViewController.swift; sourceTree = "<group>"; };
+		759392202612785F004B2765 /* JGLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +72,28 @@
 			children = (
 				751748A42611421300B5F588 /* AppDelegate.swift */,
 				751748A62611421300B5F588 /* SceneDelegate.swift */,
-				751748A82611421300B5F588 /* ViewController.swift */,
+				751748A82611421300B5F588 /* JGRootViewController.swift */,
+				75939214261269FD004B2765 /* JGMapViewController.swift */,
+				75929A24261228380055E8FA /* JGPowerViewController.swift */,
+				759392202612785F004B2765 /* JGLocationViewController.swift */,
+				751748C526118A7E00B5F588 /* Model */,
 				751748AA2611421300B5F588 /* Main.storyboard */,
 				751748AD2611421300B5F588 /* Assets.xcassets */,
 				751748AF2611421300B5F588 /* LaunchScreen.storyboard */,
 				751748B22611421300B5F588 /* Info.plist */,
 			);
 			path = TrailerMonitor;
+			sourceTree = "<group>";
+		};
+		751748C526118A7E00B5F588 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				751748B92611858100B5F588 /* JGLocation.swift */,
+				751748C0261188FE00B5F588 /* JGMessage.swift */,
+				751748BA2611858100B5F588 /* JGPower.swift */,
+				75929A1A26121A760055E8FA /* JGClient.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +166,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				751748A92611421300B5F588 /* ViewController.swift in Sources */,
+				75929A25261228380055E8FA /* JGPowerViewController.swift in Sources */,
+				751748BC2611858100B5F588 /* JGLocation.swift in Sources */,
+				75929A1B26121A760055E8FA /* JGClient.swift in Sources */,
+				751748A92611421300B5F588 /* JGRootViewController.swift in Sources */,
+				751748BD2611858100B5F588 /* JGPower.swift in Sources */,
 				751748A52611421300B5F588 /* AppDelegate.swift in Sources */,
+				75939215261269FD004B2765 /* JGMapViewController.swift in Sources */,
 				751748A72611421300B5F588 /* SceneDelegate.swift in Sources */,
+				7593922126127860004B2765 /* JGLocationViewController.swift in Sources */,
+				751748C2261188FE00B5F588 /* JGMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
