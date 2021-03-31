@@ -315,7 +315,8 @@ class JGPowerViewController: UITableViewController {
             case 1:
                 return "Volts"
             case 2:
-                return "Watts \(self.power.batteryWatts < 0 ? "(charging)" : "(discharging)")"
+                let status = power.batteryWatts < 0 ? "(charging)" : power.batteryWatts > 0 ? "(discharging)" : ""
+                return "Watts \(status)"
             case 3:
                 return "\(self.power.batteryOverCharge ?? "0")"
             default:
