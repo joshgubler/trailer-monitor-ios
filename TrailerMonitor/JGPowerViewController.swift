@@ -29,7 +29,7 @@ class JGPowerViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.power != nil {
+        if power != nil {
             switch section {
             case acChargerSection:
                 return 5
@@ -63,8 +63,8 @@ class JGPowerViewController: UITableViewController {
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "numberCell", for: indexPath)
         }
-        cell.textLabel?.text = self.leftLabel(indexPath)
-        cell.detailTextLabel?.text = self.rightLabel(indexPath)
+        cell.textLabel?.text = leftLabel(indexPath)
+        cell.detailTextLabel?.text = rightLabel(indexPath)
         return cell
     }
     
@@ -98,76 +98,76 @@ class JGPowerViewController: UITableViewController {
         case acChargerSection:
             switch indexPath.row {
             case 0:
-                return "\(self.power.acChargerAmps ?? 0)"
+                return "\(power.acChargerAmps ?? 0)"
             case 1:
-                return "\(self.power.acChargerKwhToday ?? 0)"
+                return "\(power.acChargerKwhToday ?? 0)"
             case 2:
-                return "\(self.power.acChargerKwhTotal ?? 0)"
+                return "\(power.acChargerKwhTotal ?? 0)"
             case 3:
-                return "\(self.power.acChargerVoltamps ?? 0)"
+                return "\(power.acChargerVoltamps ?? 0)"
             case 4:
-                return "\(self.power.acChargerWatts ?? 0)"
+                return "\(power.acChargerWatts ?? 0)"
             default:
                 return "???"
             }
         case acDischargeSection:
             switch indexPath.row {
             case 0:
-                return "\(self.power.acDischargeKwhToday ?? 0)"
+                return "\(power.acDischargeKwhToday ?? 0)"
             case 1:
-                return "\(self.power.acDischargeKwhTotal ?? 0)"
+                return "\(power.acDischargeKwhTotal ?? 0)"
             case 2:
-                return "\(self.power.acDischargeVoltamps ?? 0)"
+                return "\(power.acDischargeVoltamps ?? 0)"
             case 3:
-                return "\(self.power.acDischargeWatts ?? 0)"
+                return "\(power.acDischargeWatts ?? 0)"
             default:
                 return "???"
             }
         case acInputSection:
             switch indexPath.row {
             case 0:
-                return "\(self.power.acInputFrequency ?? 0)"
+                return "\(power.acInputFrequency ?? 0)"
             case 1:
-                return "\(self.power.acInputVoltage ?? 0)"
+                return "\(power.acInputVoltage ?? 0)"
             case 2:
-                return "\(self.power.acInputVoltamps ?? 0)"
+                return "\(power.acInputVoltamps ?? 0)"
             case 3:
-                return "\(self.power.acInputWatts ?? 0)"
+                return "\(power.acInputWatts ?? 0)"
             default:
                 return "???"
             }
         case acOutputSection:
             switch indexPath.row {
             case 0:
-                return "\(self.power.acOutputAmps ?? 0)"
+                return "\(power.acOutputAmps ?? 0)"
             case 1:
-                return "\(self.power.acOutputFrequency ?? 0)"
+                return "\(power.acOutputFrequency ?? 0)"
             case 2:
-                return "\(self.power.acOutputVoltage ?? 0)"
+                return "\(power.acOutputVoltage ?? 0)"
             default:
                 return "???"
             }
         case batteryDischargeSection:
             switch indexPath.row {
             case 0:
-                return "\(self.power.batteryDischargeKwhToday ?? 0)"
+                return "\(power.batteryDischargeKwhToday ?? 0)"
             case 1:
-                return "\(self.power.batteryDischargeKwhTotal ?? 0)"
+                return "\(power.batteryDischargeKwhTotal ?? 0)"
             case 2:
-                return "\(self.power.batteryDischargeVoltamps ?? 0)"
+                return "\(power.batteryDischargeVoltamps ?? 0)"
             case 3:
-                return "\(self.power.batteryDischargeWatts ?? 0)"
+                return "\(power.batteryDischargeWatts ?? 0)"
             default:
                 return "???"
             }
         case batterySection:
             switch indexPath.row {
             case 0:
-                return "\(self.power.batteryStateOfCharge ?? 0)"
+                return "\(power.batteryStateOfCharge ?? 0)"
             case 1:
-                return "\(self.power.batteryVoltage ?? 0)"
+                return "\(power.batteryVoltage ?? 0)"
             case 2:
-                return "\(self.power.batteryWatts ?? 0)"
+                return "\(power.batteryWatts ?? 0)"
             case 3:
                 return ""
             default:
@@ -207,32 +207,32 @@ class JGPowerViewController: UITableViewController {
         case inverterSection:
             switch indexPath.row {
             case 0:
-                return "\(self.power.inverterAmps ?? 0)"
+                return "\(power.inverterAmps ?? 0)"
             case 1:
-                return "\(self.power.inverterFanSpeed ?? 0)"
+                return "\(power.inverterFanSpeed ?? 0)"
             case 2:
-                return String(format: "%.1f", self.power.inverterTemperature)
+                return String(format: "%.1f", power.inverterTemperature)
             case 3:
-                return "\(self.power.loadPercentage ?? 0)"
+                return "\(power.loadPercentage ?? 0)"
             case 4:
-                return "\(self.power.outputVoltamps ?? 0)"
+                return "\(power.outputVoltamps ?? 0)"
             case 5:
-                return "\(self.power.outputWatts ?? 0)"
+                return "\(power.outputWatts ?? 0)"
             default:
                 return "???"
             }
         case solarSection:
             switch indexPath.row {
             case 0:
-                return "\(self.power.solarChargerFanSpeed ?? 0)"
+                return "\(power.solarChargerFanSpeed ?? 0)"
             case 1:
-                return "\(self.power.solarChargerWatts ?? 0)"
+                return "\(power.solarChargerWatts ?? 0)"
             case 2:
-                return "\(self.power.solarKwhToday ?? 0)"
+                return "\(power.solarKwhToday ?? 0)"
             case 3:
-                return "\(self.power.solarKwhTotal ?? 0)"
+                return "\(power.solarKwhTotal ?? 0)"
             case 4:
-                return "\(self.power.solarVoltage ?? 0)"
+                return "\(power.solarVoltage ?? 0)"
             default:
                 return "???"
             }
@@ -318,38 +318,38 @@ class JGPowerViewController: UITableViewController {
                 let status = power.batteryWatts < 0 ? "(charging)" : power.batteryWatts > 0 ? "(discharging)" : ""
                 return "Watts \(status)"
             case 3:
-                return "\(self.power.batteryOverCharge ?? "0")"
+                return "\(power.batteryOverCharge ?? "0")"
             default:
                 return "???"
             }
         case systemSection:
             switch indexPath.row {
             case 0:
-                return "\(self.power.status ?? "0")"
+                return "\(power.status ?? "0")"
             case 1:
-                return "\(self.power.checkStep ?? "0")"
+                return "\(power.checkStep ?? "0")"
             case 2:
-                return "\(self.power.constantPowerOk ?? "0")"
+                return "\(power.constantPowerOk ?? "0")"
             case 3:
-                return "\(self.power.dtc ?? 0)"
+                return "\(power.dtc ?? 0)"
             case 4:
-                return "\(self.power.warningBit ?? 0)"
+                return "\(power.warningBit ?? 0)"
             case 5:
-                return "\(self.power.warningValue ?? 0)"
+                return "\(power.warningValue ?? 0)"
             case 6:
-                return "\(self.power.faultBit ?? 0)"
+                return "\(power.faultBit ?? 0)"
             case 7:
-                return "\(self.power.faultValue ?? 0)"
+                return "\(power.faultValue ?? 0)"
             case 8:
-                return "\(self.power.busVoltage ?? 0) v"
+                return "\(power.busVoltage ?? 0) v"
             case 9:
-                return "\(self.power.dcOutputVoltage ?? 0) v"
+                return "\(power.dcOutputVoltage ?? 0) v"
             case 10:
-                return String(format: "%.1f °F", self.power.dcdcTemperature)
+                return String(format: "%.1f °F", power.dcdcTemperature)
             case 11:
-                return "\(self.power.workTimeTotal ?? 0) s"
+                return "\(power.workTimeTotal ?? 0) s"
             case 12:
-                return "\(self.power.productionLineMode ?? "0")"
+                return "\(power.productionLineMode ?? "0")"
             default:
                 return "???"
             }

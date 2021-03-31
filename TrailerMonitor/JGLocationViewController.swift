@@ -19,7 +19,7 @@ class JGLocationViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.location != nil {
+        if location != nil {
             return 10
         }
         return 0
@@ -27,8 +27,8 @@ class JGLocationViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = self.leftLabel(row: indexPath.row)
-        cell.detailTextLabel?.text = self.rightLabel(row: indexPath.row)
+        cell.textLabel?.text = leftLabel(row: indexPath.row)
+        cell.detailTextLabel?.text = rightLabel(row: indexPath.row)
         return cell
     }
     
@@ -39,23 +39,23 @@ class JGLocationViewController: UITableViewController {
     func leftLabel(row: Int) -> String {
         switch row {
         case 0:
-            return String(format: "Altitude (~%.0f ft)", self.location.altErr)
+            return String(format: "Altitude (~%.0f ft)", location.altErr)
         case 1:
-            return String(format: "Climb (~%.0f ft/hr)", self.location.climbErr * 5280.0)
+            return String(format: "Climb (~%.0f ft/hr)", location.climbErr * 5280.0)
         case 2:
             return "Grade"
         case 3:
-            return String(format: "Latitude (~%.0f ft)", self.location.latErr)
+            return String(format: "Latitude (~%.0f ft)", location.latErr)
         case 4:
-            return String(format: "Longitude (~%.0f ft)", self.location.lonErr)
+            return String(format: "Longitude (~%.0f ft)", location.lonErr)
         case 5:
             return "Mode"
         case 6:
             return "Satelites"
         case 7:
-            return String(format: "Speed (~%.0f mph)", self.location.speedErr)
+            return String(format: "Speed (~%.0f mph)", location.speedErr)
         case 8:
-            return "Time (~\(self.location.timeErr ?? 0) s)"
+            return "Time (~\(location.timeErr ?? 0) s)"
         case 9:
             return "Direction"
         default:
@@ -66,25 +66,25 @@ class JGLocationViewController: UITableViewController {
     func rightLabel(row: Int) -> String {
         switch row {
         case 0:
-            return String(format: "%.0f ft", self.location.alt)
+            return String(format: "%.0f ft", location.alt)
         case 1:
-            return String(format: "%.0f ft/hr", self.location.climb * 5280.0)
+            return String(format: "%.0f ft/hr", location.climb * 5280.0)
         case 2:
-            return String(format: "%.0f%%", self.location.climb / self.location.speed * 100.0)
+            return String(format: "%.0f%%", location.climb / location.speed * 100.0)
         case 3:
-            return String(format: "%.9f°", self.location.lat)
+            return String(format: "%.9f°", location.lat)
         case 4:
-            return String(format: "%.9f°", self.location.lon)
+            return String(format: "%.9f°", location.lon)
         case 5:
-            return "\(self.location.mode ?? "0")"
+            return "\(location.mode ?? "0")"
         case 6:
-            return "\(self.location.sats ?? 0)"
+            return "\(location.sats ?? 0)"
         case 7:
-            return String(format: "%.0f mph", self.location.speed)
+            return String(format: "%.0f mph", location.speed)
         case 8:
-            return "\(self.location.time ?? "0")"
+            return "\(location.time ?? "0")"
         case 9:
-            return String(format: "%.0f°", self.location.track)
+            return String(format: "%.0f°", location.track)
         default:
             return "???"
         }

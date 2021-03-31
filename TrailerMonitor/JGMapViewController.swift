@@ -16,33 +16,33 @@ class JGMapViewController: UIViewController {
 
     var location: JGLocation! {
         willSet {
-            if self.location == nil {
-                self.needsRecenter = true
+            if location == nil {
+                needsRecenter = true
             }
         }
         didSet {
-            let coordinate = CLLocationCoordinate2D(latitude: self.location.lat!, longitude: self.location.lon!)
-            self.annotation.coordinate = coordinate
-            let accuracy = max(self.location.latErr, self.location.lonErr)
-            self.annotation.title = String(format: "~ %.0f ft", accuracy)
+            let coordinate = CLLocationCoordinate2D(latitude: location.lat!, longitude: location.lon!)
+            annotation.coordinate = coordinate
+            let accuracy = max(location.latErr, location.lonErr)
+            annotation.title = String(format: "~ %.0f ft", accuracy)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.requestWhenInUseAuthorization()
-        mapView.addAnnotation(self.annotation)
+        mapView.addAnnotation(annotation)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if self.needsRecenter {
-            self.recenterMap()
+        if needsRecenter {
+            recenterMap()
         }
     }
     
     @IBAction func recenterMap() {
-        if let mapView = self.mapView {
+        if let mapView = mapView {
             let coordinates = mapView.annotations.map(\.coordinate)
             var maxCoord = CLLocationCoordinate2D(latitude: -90.0, longitude: -180.0);
             var minCoord = CLLocationCoordinate2D(latitude: 90.0, longitude: 180.0);
@@ -70,7 +70,7 @@ class JGMapViewController: UIViewController {
             let span = MKCoordinateSpan(latitudeDelta: latitudeDelta + latitudeBuffer, longitudeDelta: lonongitudeDelta + longitudeBuffer)
             let region = MKCoordinateRegion(center: center, span: span)
             mapView.setRegion(region, animated: true)
-            self.needsRecenter = false
+            needsRecenter = false
         }
     }
 }
