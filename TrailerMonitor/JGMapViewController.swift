@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class JGMapViewController: UIViewController {
+class JGMapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     let annotation = MKPointAnnotation()
     let manager = CLLocationManager()
@@ -38,6 +38,18 @@ class JGMapViewController: UIViewController {
         super.viewDidAppear(animated)
         if needsRecenter {
             recenterMap()
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if view == mapView.view(for: annotation) {
+            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+                let url = URL(string:"comgooglemaps://?daddr=\(location.lat!),\(location.lon!)&directionsmode=driving")!
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                mapView.deselectAnnotation(annotation, animated: true)
+            } else {
+              print("Can't use comgooglemaps://");
+            }
         }
     }
     
