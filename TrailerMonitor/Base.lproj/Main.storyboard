@@ -92,14 +92,6 @@
                                     <outlet property="delegate" destination="eZi-TZ-4jj" id="mzL-5Z-rf9"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1zW-pk-8uK">
-                                <rect key="frame" x="320" y="44" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Center"/>
-                                <connections>
-                                    <action selector="recenterMap" destination="eZi-TZ-4jj" eventType="touchUpInside" id="udv-z5-eOx"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k5W-bA-0iD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

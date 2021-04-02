@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JGRootViewController: UITabBarController, JGClientDelegate {
+class JGRootViewController: UITabBarController, JGClientDelegate, UITabBarControllerDelegate{
     var localClient: JGClient!
     var vpnClient: JGClient!
 
@@ -19,6 +19,18 @@ class JGRootViewController: UITabBarController, JGClientDelegate {
         localClient = JGClient(url: URL(string: "ws://trailer:8765/")!)
         localClient.delegate = self
         localClient.connect()
+        self.delegate = self
+    }
+
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if let viewControllers = self.viewControllers {
+            //was map tab tapped when it was already selected
+            if self.selectedIndex == 1 && viewControllers[1] == viewController {
+                let mapViewController = viewController as! JGMapViewController
+                mapViewController.recenterMap()
+            }
+        }
+        return true
     }
     
     override func didReceiveMemoryWarning() {

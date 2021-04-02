@@ -53,7 +53,7 @@ class JGMapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    @IBAction func recenterMap() {
+    func recenterMap() {
         if let mapView = mapView {
             let coordinates = mapView.annotations.map(\.coordinate)
             var maxCoord = CLLocationCoordinate2D(latitude: -90.0, longitude: -180.0);
