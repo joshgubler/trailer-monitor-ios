@@ -13,18 +13,18 @@ The app attempts to establish a websocket connection at both of these locations.
 
 ## Power Data
 
-![power tab](screenshots/power.png)
+![power tab](doc/power.png)
 
 Real time data feed of AC, battery, inverter, solar, and overall power system health.
 
 ## Map
 
-![map tab](screenshots/map.png)
+![map tab](doc/map.png)
 
 Real time feed of trailer (red pin) and user location (blue dot) on a map. Tapping the `Map` tab a second time re-centers the map. Tapping the pin launches Google Maps app in navigation mode, giving directions back to the trailer. (Google Maps will not track trailer location. If the trailer moves, you'll need to switch back to the monitor app and tap the red pin again.)
 
 ## GPS Data
 
-![GPS tab](screenshots/gps.png)
+![GPS tab](doc/gps.png)
 
 Real time feed of speed and location data.
