@@ -20,7 +20,7 @@ class JGLocationViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if location != nil {
-            return 10
+            return 9
         }
         return 0
     }
@@ -43,20 +43,18 @@ class JGLocationViewController: UITableViewController {
         case 1:
             return String(format: "Climb (~%.0f ft/hr)", location.climbErr * 5280.0)
         case 2:
-            return "Grade"
-        case 3:
             return String(format: "Latitude (~%.0f ft)", location.latErr)
-        case 4:
+        case 3:
             return String(format: "Longitude (~%.0f ft)", location.lonErr)
-        case 5:
+        case 4:
             return "Mode"
-        case 6:
+        case 5:
             return "Satelites"
-        case 7:
+        case 6:
             return String(format: "Speed (~%.0f mph)", location.speedErr)
-        case 8:
+        case 7:
             return "Time (~\(location.timeErr ?? 0) s)"
-        case 9:
+        case 8:
             return "Direction"
         default:
             return "???"
@@ -70,20 +68,18 @@ class JGLocationViewController: UITableViewController {
         case 1:
             return String(format: "%.0f ft/hr", location.climb * 5280.0)
         case 2:
-            return String(format: "%.0f%%", location.climb / location.speed * 100.0)
-        case 3:
             return String(format: "%.9f°", location.lat)
-        case 4:
+        case 3:
             return String(format: "%.9f°", location.lon)
-        case 5:
+        case 4:
             return "\(location.mode ?? "0")"
-        case 6:
+        case 5:
             return "\(location.sats ?? 0)"
-        case 7:
+        case 6:
             return String(format: "%.0f mph", location.speed)
-        case 8:
+        case 7:
             return "\(location.time ?? "0")"
-        case 9:
+        case 8:
             return String(format: "%.0f°", location.track)
         default:
             return "???"
