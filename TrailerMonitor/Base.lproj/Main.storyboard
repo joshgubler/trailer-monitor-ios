@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Pc-Or-gru">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Pc-Or-gru">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +19,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="numberCell" textLabel="3Zd-BN-UVD" detailTextLabel="QKw-u9-TDU" style="IBUITableViewCellStyleValue2" id="Ci3-c1-4te">
-                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ci3-c1-4te" id="uek-yy-gEk">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
@@ -42,7 +43,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" textLabel="jpU-Yl-Lpf" detailTextLabel="wIA-8z-yB2" style="IBUITableViewCellStyleValue1" id="0av-Df-L3u">
-                                <rect key="frame" x="0.0" y="71.666667938232422" width="390" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="88.333333969116211" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0av-Df-L3u" id="BXP-2B-QVr">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
@@ -71,7 +72,7 @@
                             <outlet property="delegate" destination="6tJ-iG-L2j" id="hUv-Rs-zyI"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Power" image="bolt.fill.batteryblock" catalog="system" id="7tV-h3-7g8"/>
+                    <tabBarItem key="tabBarItem" title="Power" image="bolt.batteryblock" catalog="system" id="7tV-h3-7g8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEL-z8-RCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,7 +136,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="CJF-sI-c0N" detailTextLabel="NLu-6Q-2fU" style="IBUITableViewCellStyleValue1" id="5O7-nI-mYv">
-                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5O7-nI-mYv" id="4c3-oe-e5W">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
@@ -172,8 +173,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bolt.fill.batteryblock" catalog="system" width="128" height="93"/>
-        <image name="location" catalog="system" width="128" height="121"/>
+        <image name="bolt.batteryblock" catalog="system" width="128" height="93"/>
+        <image name="location" catalog="system" width="128" height="118"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
